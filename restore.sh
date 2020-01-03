@@ -37,3 +37,8 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# Set Neovim config
+mkdir -p ~/.local/share/nvim/site
+ln -s ~/.local/share/nvim/site ~/.vim
+ln -s ~/.config/nvim/init.vim ~/.vimrc
